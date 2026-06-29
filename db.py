@@ -6,9 +6,7 @@ from urllib.parse import quote_plus
 
 load_dotenv()
 
-password = quote_plus("m@t@l@kshmi")
-
-DATABASE_URL=f"postgresql://username:password@localhost:port/account_manager"
+DATABASE_URL=os.getenv("DATABASE_URL")
 
 engine=create_engine(DATABASE_URL)
 
