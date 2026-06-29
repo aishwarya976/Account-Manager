@@ -12,15 +12,15 @@ def hash_password(password):
 def verify_password(plain_password,hashed_password):
     return pwd_content.verify(plain_password,hashed_password)
 
-SECRET_KEY="mysecretkey"
-ALGORITHM="HS256"
+SECRET_KEY=".."
+ALGORITHM=".."
 
 def create_token(data):
     to_encode=data.copy()
     expire=datetime.now()+timedelta(minutes=30)
     to_encode.update({"exp":expire})
     encoded_jwt=jwt.encode(
-        to_encode, key=SECRET_KEY,algorithm=ALGORITHM
+        to_encode, key=..,algorithm=..
     )
 
     return encoded_jwt
