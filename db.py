@@ -8,7 +8,7 @@ load_dotenv()
 
 password = quote_plus("m@t@l@kshmi")
 
-DATABASE_URL=f"postgresql://postgres:m%40t%40l%40kshmi@localhost:5432/account_manager"
+DATABASE_URL=f"postgresql://username:password@localhost:port/account_manager"
 
 engine=create_engine(DATABASE_URL)
 
